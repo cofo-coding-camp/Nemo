@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-# Solution - 1 Iteration
+# Solution - 1 Iterative
 
 
 class Solution:
