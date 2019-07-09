@@ -36,49 +36,29 @@ class MedianFinder:
         """
         initialize your data structure here.
         """
-        self.vec = []
-
-    def binary_insert(self, s, e, tgt):
-        while s <= e:
-            if s == e:
-                if self.vec[s] >= tgt:
-                    self.vec.insert(s, tgt)
-                else:
-                    self.vec.insert(s+1, tgt)
-                break
-            if e - s == 1 and self.vec[e] > tgt and self.vec[s] < tgt:
-                self.vec.insert(s+1, tgt)
-                break
-
-            mid = (s + e) // 2
-
-            if self.vec[mid] > tgt:
-                e = mid - 1
-            elif self.vec[mid] < tgt:
-                s = mid + 1
-                if self.vec[s] < tgt:
-                    pass
-                else:
-                    self.vec.insert(s, tgt)
-                    break
-            else:
-                self.vec.insert(mid, tgt)
+        self.array = []
 
     def addNum(self, num: int) -> None:
-        if not self.vec:
-            self.vec.append(num)
-        elif num >= self.vec[-1]:
-            self.vec.append(num)
-        elif num <= self.vec[0]:
-            self.vec.insert(0, num)
+        if not self.array or self.array[-1] <= num:
+            self.array.append(num)
         else:
-            self.binary_insert(0, len(self.vec), num)
-
+            l = 0
+            r = len(self.array) - 1
+            while l < r:
+                mid = (l + r) // 2
+                if self.array[mid] == num:
+                    l = mid
+                    break
+                elif self.array[mid] > num:
+                    r = mid
+                else:
+                    l = mid + 1
+            self.array.insert(l, num)
     def findMedian(self) -> float:
-        l = len(self.vec)
+        l = len(self.array)
         if l % 2:
-            return self.vec[l // 2]
-        return (self.vec[l // 2 - 1] + self.vec[l // 2]) / 2
+            return self.array[l // 2]
+        return (self.array[l // 2 - 1] + self.array[l // 2]) / 2
 
 
 # Your MedianFinder object will be instantiated and called as such:
