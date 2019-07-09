@@ -26,21 +26,6 @@ class MedianFinder:
             return (self.max_q[0] - self.min_q[0]) / 2
         return self.max_q[0]
 
-
-# Solution - 2 
-
-
-class MedianFinder:
-
-    def __init__(self):
-        """
-        initialize your data structure here.
-        """
-
-    def addNum(self, num: int) -> None:
-
-    def findMedian(self) -> float:
-
 # Your MedianFinder object will be instantiated and called as such:
 # obj = MedianFinder()
 # obj.addNum(num)
