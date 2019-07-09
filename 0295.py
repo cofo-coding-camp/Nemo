@@ -27,7 +27,7 @@ class MedianFinder:
         return self.max_q[0]
 
 
-# Solution - 2 Binary Insert
+# Solution - 2 Binary Search
 
 
 class MedianFinder:
