@@ -20,7 +20,7 @@ class Solution:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        if not head or head.next:
+        if not head or not head.next:
             return head
         res = self.reverseList(head.next)
         head.next.next = head
