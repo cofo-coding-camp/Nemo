@@ -19,6 +19,7 @@ class LRUCache:
             self.d.popitem(last = False)
         
 
+<<<<<<< HEAD
 # Solution - 2 Hash Map
 
 
@@ -77,3 +78,9 @@ class LRUCache:
 # param_1 = obj.get(key)
 # obj.put(key,value)
 
+=======
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
+>>>>>>> 673f03c64a73be07006e94c7fd6627e5a17ced07

@@ -27,7 +27,10 @@ class MedianFinder:
         return self.max_q[0]
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 673f03c64a73be07006e94c7fd6627e5a17ced07
 # Solution - 2 Binary Search
 
 
@@ -55,7 +58,10 @@ class MedianFinder:
                 else:
                     l = mid + 1
             self.array.insert(l, num)
+<<<<<<< HEAD
             
+=======
+>>>>>>> 673f03c64a73be07006e94c7fd6627e5a17ced07
     def findMedian(self) -> float:
         l = len(self.array)
         if l % 2:
@@ -63,8 +69,15 @@ class MedianFinder:
         return (self.array[l // 2 - 1] + self.array[l // 2]) / 2
 
 
+<<<<<<< HEAD
 
 # Your MedianFinder object will be instantiated and called as such:
 # obj = MedianFinder()
 # obj.addNum(num)
 # param_2 = obj.findMedian()
+=======
+# Your MedianFinder object will be instantiated and called as such:
+# obj = MedianFinder()
+# obj.addNum(num)
+# param_2 = obj.findMedian()
+>>>>>>> 673f03c64a73be07006e94c7fd6627e5a17ced07
