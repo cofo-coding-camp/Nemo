@@ -1,8 +1,8 @@
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
 
 # Solution 1 - Recursive
 
@@ -71,4 +71,3 @@ class Solution:
             else:
                 high = mid - 1
         return low
-
