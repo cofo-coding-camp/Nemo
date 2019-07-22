@@ -8,8 +8,8 @@ class ListNode:
 class LFUCache:
 
     def __init__(self, capacity: int):
-        self.data = {} # key:[node, freq]
-        self.freq = {} # freq;[head, tail, nums]
+        self.data = {} # key: [node, freq]
+        self.freq = {} # freq: [head, tail, nums]
         self.minfreq = float('inf')
         self.capacity = capacity
 
@@ -21,7 +21,8 @@ class LFUCache:
     
     def updatefreq(self, key):
         if self.freq[self.data[key][1]][2] == 1:
-            self.minfreq += 1
+            if self.minfreq == self.data[key][1]:
+                self.minfreq += 1
             self.freq.pop(self.data[key][1])
         else:
             self.freq[self.data[key][1]][2] -= 1
