@@ -1,4 +1,3 @@
-# Solution 1 - DFS
 class Solution:
     def solve(self, board):
         """
@@ -34,5 +33,3 @@ class Solution:
                     board[i][j] = 'X'
                 if board[i][j] == 'F':
                     board[i][j] = 'O'
-
-#TODO: BFS
