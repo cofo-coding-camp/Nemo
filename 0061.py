@@ -19,7 +19,7 @@ class Solution:
 
         tail.next = head
         cur = head
-        for _ in range(n - k % n - 1):
+        for _ in range(l - k % l - 1):
             cur = cur.next
 
         head = cur.next
